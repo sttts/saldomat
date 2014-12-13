@@ -1376,7 +1376,7 @@
 				381D250A0D983E750098A1E9 /* Frameworks */,
 				382B12080DB81760006DC447 /* Quellcode nach GPL mitreinkopieren */,
 				38C1DF390DC2591300A188E7 /* AqBanking-Dateien kopieren */,
-				382725500DF9CC72003D3996 /* English.lproj löschen für Release */,
+				382725500DF9CC72003D3996 /* English.lproj löschen für Release */,
 			);
 			buildRules = (
 			);
@@ -1401,7 +1401,7 @@
 				381FEB140DB1422C00A9BD9E /* Frameworks kopieren */,
 				381FEB380DB148C400A9BD9E /* hbcitool und hbcidock kopieren */,
 				38C1E6C40DC431E300A188E7 /* Signieren */,
-				382725420DF9CBCA003D3996 /* English.lproj löschen für Release */,
+				382725420DF9CBCA003D3996 /* English.lproj löschen für Release */,
 			);
 			buildRules = (
 			);
@@ -1439,6 +1439,8 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "hbci" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
@@ -1625,7 +1627,7 @@
 			shellScript = "rsync -axE -v --delete \"$BUILT_PRODUCTS_DIR/Saldomat hbcitool.app\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources\"\nrsync -axE -v --delete \"$BUILT_PRODUCTS_DIR/Saldomat Dock.app\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources\"";
 			showEnvVarsInLog = 0;
 		};
-		382725420DF9CBCA003D3996 /* English.lproj löschen für Release */ = {
+		382725420DF9CBCA003D3996 /* English.lproj löschen für Release */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1640,7 +1642,7 @@
 			shellScript = "if [ ! \"$BUILD_STYLE\" = \"Debug\" ]; then\n\trm -rf \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/English.lproj\"\nfi";
 			showEnvVarsInLog = 0;
 		};
-		382725500DF9CC72003D3996 /* English.lproj löschen für Release */ = {
+		382725500DF9CC72003D3996 /* English.lproj löschen für Release */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2099,7 +2101,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -2114,7 +2116,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
@@ -2122,7 +2124,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2146,6 +2148,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-debug/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-debug/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -2174,7 +2177,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -2182,7 +2185,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2215,6 +2218,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2267,7 +2271,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
 			};
@@ -2298,12 +2302,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(DEVELOPER_DIR)/Local/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2342,15 +2345,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(DEVELOPER_DIR)/Local/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2393,7 +2394,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 			};
 			name = "Release-growl-installer";
 		};
@@ -2412,7 +2413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2445,6 +2446,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2497,7 +2499,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
 			};
@@ -2507,15 +2509,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(DEVELOPER_DIR)/Local/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2565,8 +2565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2600,7 +2599,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2634,8 +2633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
