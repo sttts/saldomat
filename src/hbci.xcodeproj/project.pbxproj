@@ -357,8 +357,6 @@
 		3812BFC20DBB78C3002EB632 /* RotGruenFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotGruenFormatter.m; path = hbcimenu/RotGruenFormatter.m; sourceTree = "<group>"; };
 		3812C2730DBBC97D002EB632 /* LangTagTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LangTagTransformer.h; path = hbcimenu/prefwindow/LangTagTransformer.h; sourceTree = "<group>"; };
 		3812C2740DBBC97D002EB632 /* LangTagTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LangTagTransformer.m; path = hbcimenu/prefwindow/LangTagTransformer.m; sourceTree = "<group>"; };
-		381D23D30D980B170098A1E9 /* OmniBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmniBase.framework; path = ../OmniGroup/Debug/OmniBase.framework; sourceTree = SOURCE_ROOT; };
-		381D23D40D980B170098A1E9 /* OmniFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmniFoundation.framework; path = ../OmniGroup/Debug/OmniFoundation.framework; sourceTree = SOURCE_ROOT; };
 		381D250C0D983E750098A1E9 /* Saldomat hbcitool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saldomat hbcitool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		381D250E0D983E750098A1E9 /* hbcitool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "hbcitool-Info.plist"; path = "hbcitool/hbcitool-Info.plist"; sourceTree = "<group>"; };
 		381D25260D983FD60098A1E9 /* CocoaBanking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaBanking.h; path = hbcitool/CocoaBanking.h; sourceTree = "<group>"; };
@@ -838,8 +836,6 @@
 				381D26470D992FD90098A1E9 /* Security.framework */,
 				381D26480D992FD90098A1E9 /* SecurityFoundation.framework */,
 				381D26490D992FD90098A1E9 /* SecurityInterface.framework */,
-				381D23D30D980B170098A1E9 /* OmniBase.framework */,
-				381D23D40D980B170098A1E9 /* OmniFoundation.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 				F506C035013D953901CA16C8 /* PreferencePanes.framework */,
 			);
