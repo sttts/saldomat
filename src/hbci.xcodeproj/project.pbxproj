@@ -1399,7 +1399,6 @@
 				389ECE240DA8C964000791E1 /* Sources */,
 				389ECE250DA8C964000791E1 /* Frameworks */,
 				381FEB140DB1422C00A9BD9E /* Frameworks kopieren */,
-				38A8E5FB0DD759A500006070 /* Growl kopieren */,
 				381FEB380DB148C400A9BD9E /* hbcitool und hbcidock kopieren */,
 				38C1E6C40DC431E300A188E7 /* Signieren */,
 				382725420DF9CBCA003D3996 /* English.lproj löschen für Release */,
@@ -2321,8 +2320,6 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
-					"-framework",
-					Growl,
 					"-seg1addr",
 					0x10000000,
 					"-lcrypto",
@@ -2366,8 +2363,6 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
-					"-framework",
-					Growl,
 					"-seg1addr",
 					0x10000000,
 					"-lcrypto",
@@ -2533,8 +2528,19 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x10000000,
+					"-lcrypto",
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"hbcimenu/hbcimenu-Info.plist",
 					"-framework",
-					"Growl-WithInstaller",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
 					"-seg1addr",
 					0x10000000,
 					"-lcrypto",
