@@ -9,7 +9,7 @@
 #import "debug.h"
 #import "Buchung.h"
 
-#import <RegexKit/NSString.h>
+#import "RegexKitLite.h"
 
 #import "NSManagedObject+Clone.h"
 #import "NSString+GUID.h"
@@ -181,9 +181,7 @@
 - (NSString *)effektiverZweck
 {
 //	return [self effektiverZweckRaw];
-	return [[self effektiverZweckRaw] stringByMatching:@"  *"
-						   replace:100
-				       withReferenceString:@" "];
+	return [[self effektiverZweckRaw] stringByReplacingOccurrencesOfRegex:@"  *" withString:@" " ];
 }
 
 

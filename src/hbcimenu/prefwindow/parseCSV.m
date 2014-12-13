@@ -15,7 +15,7 @@
  * Warning: Do not call it with haystack == NULL || needle == NULL!
  *
  */
-inline char *cstrstr(const char *haystack, const char needle) {
+/*inline*/ char *cstrstr(const char *haystack, const char needle) {
 	char *it = (char*)haystack;
 	while (*it != '\0') {
 		if (*it == needle)

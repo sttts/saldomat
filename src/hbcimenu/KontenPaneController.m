@@ -7,7 +7,7 @@
 //
 
 #import "KontenPaneController.h"
-#import <RegexKit/RegexKit.h>
+#import "RegexKitLite.h"
 #import <WebKit/WebKit.h>
 
 #import "AppController.h"

@@ -8,7 +8,7 @@
 
 #import "ExpertenKontoController.h"
 
-#import <RegexKit/RKRegex.h>
+#import "RegexKitLite.h"
 
 #import "Buchung.h"
 #import "debug.h"
@@ -86,7 +86,7 @@
 {
 	// pruefen, dass der regulaere Ausdruck ok ist. Sonst rot faerben
 	if (control == regexp_) {
-		BOOL ok = [RKRegex isValidRegexString:[regexp_ stringValue] options:0];
+		BOOL ok = [[regexp_ stringValue] isRegexValid];
 		if (!ok)
 			[regexp_ setTextColor:[NSColor redColor]];
 		else

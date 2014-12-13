@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		38005EA119F702C100FB6E2E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 38005EA019F702C100FB6E2E /* RegexKitLite.m */; };
 		380183A20DFF3B7000B0E73A /* 928_967.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 380183A10DFF3B7000B0E73A /* 928_967.xcmappingmodel */; };
 		380185300E0184A000B0E73A /* Sparkle.framework in Frameworks kopieren */ = {isa = PBXBuildFile; fileRef = 381FEAD90DB141CC00A9BD9E /* Sparkle.framework */; };
 		3808EA9C0E150E540066A855 /* beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 3808EA9B0E150E540066A855 /* beta.png */; };
@@ -155,9 +156,7 @@
 		38B346130DBD1E990018303A /* neuebuchung.icns in Resources */ = {isa = PBXBuildFile; fileRef = 38B346120DBD1E990018303A /* neuebuchung.icns */; };
 		38B3461E0DBD1F130018303A /* transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B3461D0DBD1F130018303A /* transparent.png */; };
 		38B347640DBD3E510018303A /* FilterEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B347630DBD3E510018303A /* FilterEditorController.m */; };
-		38B589240E083DCB00023C76 /* RegexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B589230E083DCB00023C76 /* RegexKit.framework */; };
 		38B5893D0E08594200023C76 /* 995_1009.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 38B5893C0E08594200023C76 /* 995_1009.xcmappingmodel */; };
-		38B5899B0E08610200023C76 /* RegexKit.framework in Frameworks kopieren */ = {isa = PBXBuildFile; fileRef = 38B589230E083DCB00023C76 /* RegexKit.framework */; };
 		38B58BA20E088B9500023C76 /* 1009_1010.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 38B58BA10E088B9500023C76 /* 1009_1010.xcmappingmodel */; };
 		38B58C390E0931B500023C76 /* ExpertenKontoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B58C380E0931B500023C76 /* ExpertenKontoController.m */; };
 		38B58C3B0E0931D700023C76 /* ExpertenKontoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B58C3A0E0931D700023C76 /* ExpertenKontoWindow.xib */; };
@@ -332,7 +331,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				38B5899B0E08610200023C76 /* RegexKit.framework in Frameworks kopieren */,
 				380185300E0184A000B0E73A /* Sparkle.framework in Frameworks kopieren */,
 			);
 			name = "Frameworks kopieren";
@@ -344,6 +342,8 @@
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		38005E9F19F702C100FB6E2E /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = "RegexKitLite-4.0/RegexKitLite.h"; sourceTree = "<group>"; };
+		38005EA019F702C100FB6E2E /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = "RegexKitLite-4.0/RegexKitLite.m"; sourceTree = "<group>"; };
 		3801839E0DFF3AB200B0E73A /* KontoDocument 967.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "KontoDocument 967.xcdatamodel"; sourceTree = "<group>"; };
 		380183A10DFF3B7000B0E73A /* 928_967.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; name = 928_967.xcmappingmodel; path = hbcimenu/mappings/928_967.xcmappingmodel; sourceTree = "<group>"; };
 		3808EA9B0E150E540066A855 /* beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beta.png; path = hbcimenu/Symbole/beta.png; sourceTree = "<group>"; };
@@ -569,7 +569,6 @@
 		38B3461D0DBD1F130018303A /* transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = transparent.png; path = hbcimenu/Symbole/transparent.png; sourceTree = "<group>"; };
 		38B347620DBD3E510018303A /* FilterEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterEditorController.h; path = hbcimenu/kontowindow/FilterEditorController.h; sourceTree = "<group>"; };
 		38B347630DBD3E510018303A /* FilterEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterEditorController.m; path = hbcimenu/kontowindow/FilterEditorController.m; sourceTree = "<group>"; };
-		38B589230E083DCB00023C76 /* RegexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegexKit.framework; path = Local/Frameworks/RegexKit.framework; sourceTree = DEVELOPER_DIR; };
 		38B589380E084DB400023C76 /* KontoDocument 1009.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "KontoDocument 1009.xcdatamodel"; sourceTree = "<group>"; };
 		38B5893C0E08594200023C76 /* 995_1009.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; name = 995_1009.xcmappingmodel; path = hbcimenu/mappings/995_1009.xcmappingmodel; sourceTree = "<group>"; };
 		38B58B9C0E088ACC00023C76 /* KontoDocument 1010.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "KontoDocument 1010.xcdatamodel"; sourceTree = "<group>"; };
@@ -784,7 +783,6 @@
 				384786DF0DAF5DC1006A1C3B /* CoreData.framework in Frameworks */,
 				381FEADA0DB141CC00A9BD9E /* Sparkle.framework in Frameworks */,
 				4C8708380DC5472B00DA518D /* QuartzCore.framework in Frameworks */,
-				38B589240E083DCB00023C76 /* RegexKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,7 +831,6 @@
 			isa = PBXGroup;
 			children = (
 				4C75F3A20E1C041A0069E9BA /* WebKit.framework */,
-				38B589230E083DCB00023C76 /* RegexKit.framework */,
 				382B124D0DB81DAF006DC447 /* AddressBook.framework */,
 				3891D2AA0DB6CCFE0004F451 /* Carbon.framework */,
 				3891CEC90DB63F210004F451 /* SystemConfiguration.framework */,
@@ -1093,6 +1090,8 @@
 		389ECE2B0DA8C970000791E1 /* hbcimenu */ = {
 			isa = PBXGroup;
 			children = (
+				38005E9F19F702C100FB6E2E /* RegexKitLite.h */,
+				38005EA019F702C100FB6E2E /* RegexKitLite.m */,
 				387D8FA70DDB6B620096FE6D /* AppleScript */,
 				387D8C260DDA5C0B0096FE6D /* Hilfsklassen */,
 				387D8C250DDA5BE90096FE6D /* Fenster */,
@@ -1840,6 +1839,7 @@
 				3891D2840DB6C9C60004F451 /* UKLoginItemRegistry.m in Sources */,
 				3891D3A70DB6D00E0004F451 /* LoginItemsAE.m in Sources */,
 				382B12470DB81D79006DC447 /* UKCrashReporter.m in Sources */,
+				38005EA119F702C100FB6E2E /* RegexKitLite.m in Sources */,
 				382B124A0DB81D79006DC447 /* UKNibOwner.m in Sources */,
 				382B124B0DB81D79006DC447 /* UKSystemInfo.m in Sources */,
 				4CF717B80DB8EC9E009ADEC2 /* SidebarController.m in Sources */,
@@ -2338,6 +2338,7 @@
 					Foundation,
 					"-framework",
 					AppKit,
+					"-licucore",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat-debug";
