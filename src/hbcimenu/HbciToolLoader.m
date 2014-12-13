@@ -125,11 +125,12 @@ unsigned alleOffenenHbciToolFenster = 0;
 			NSString * hbcitoolBinaryPath = [hbcitoolBundlePath stringByAppendingPathComponent:@"Contents/MacOS/Saldomat hbcitool"];
 			if (![[NSFileManager defaultManager] fileExistsAtPath:hbcitoolBinaryPath])
 				NSLog(@"Cannot find hbcitool at %@", hbcitoolBinaryPath);
-			else if (!validBundle(hbcitoolBundlePath)) {
+			else /*
+				if (!validBundle(hbcitoolBundlePath)) {
 				// Signature vom Bundle falsch
 				[self signaturFalschFehler];
 				//[NSApp terminate:self];
-			} else {
+			} else*/ {
 				NSLog(@"hbcitool Bundle ist ok");
 				
 				// Prozess aufsetzen
@@ -456,6 +457,7 @@ unsigned alleOffenenHbciToolFenster = 0;
 	}
 	
 	// Code-Signature pruefen vom hbcitool
+	/*
 	if (debugMode_ == NO && !validPid([hbcitool_ processIdentifier])) {
 		// hbcitool-Signatur ist nicht korrekt.
 		[self signaturFalschFehler];
@@ -463,7 +465,7 @@ unsigned alleOffenenHbciToolFenster = 0;
 		return nil;
 	}
 	NSLog(@"hbcitool-Signaturen ok");
-	
+	*/
 	return hbci_;
 }
 
