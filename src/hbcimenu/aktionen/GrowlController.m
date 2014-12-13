@@ -17,13 +17,13 @@
 
 - (void)awakeFromNib
 {
-	[GrowlApplicationBridge setGrowlDelegate:self];
+//	[GrowlApplicationBridge setGrowlDelegate:self];
 }	
 
 
 - (void)aufGrowlInstallationPruefen
 {
-	if ([GrowlApplicationBridge isGrowlInstalled] == NO) {
+/*	if ([GrowlApplicationBridge isGrowlInstalled] == NO) {
 		int ret = NSRunInformationalAlertPanel(
 			NSLocalizedString(@"Growl Installation", nil),
 			NSLocalizedString(@"Saldomat supports the Growl notification system "
@@ -36,6 +36,7 @@
 		if (ret == NSAlertDefaultReturn)
 			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:GROWL_INFO_URL]];
 	}
+ */
 }
 
 
@@ -65,7 +66,7 @@
 
 - (void)meldeNeueBuchungen:(NSArray *)buchungen fuerKonto:(Konto *)konto
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		if ([buchungen count] > 0) {
 			[GrowlApplicationBridge notifyWithTitle:[konto bezeichnung]
 						    description:[NSString stringWithFormat:NSLocalizedString(@"%d new transactions for %@", nil),
@@ -85,13 +86,13 @@
 						       isSticky:NO
 						   clickContext:nil];
 		}
-	}
+	}*/
 }
 
 
 - (void)meldeKontoauszugFehler:(Kontoauszug *)kontoauszug fehlerMeldung:(NSError *)error
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		Konto * konto = [kontoauszug konto];
 		[GrowlApplicationBridge notifyWithTitle:[konto bezeichnung]
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Error: %@", nil), [error localizedDescription]]
@@ -100,13 +101,13 @@
 					       priority:0
 					       isSticky:NO
 					   clickContext:[konto feedGeheimnis]];
-	}
+	}*/
 }
 
 
 - (void)meldeZuLoeschendeBuchungen:(NSArray *)alteBuchungen fuerKonto:(Konto *)konto
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		[GrowlApplicationBridge notifyWithTitle:[konto bezeichnung]
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Deleting %d old transactions", nil),
 							 [alteBuchungen count]]
@@ -115,13 +116,13 @@
 					       priority:0
 					       isSticky:NO
 					   clickContext:nil];
-	}
+	}*/
 }
 
 
 - (void)meldeSaldoWarnungFuerKonto:(Konto *)konto
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		NSString * formattedSaldoWarnung = [saldoFormatter_ stringForObjectValue:[konto warnSaldo]];
 		[GrowlApplicationBridge notifyWithTitle:[konto bezeichnung]
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Balance is below %@", nil),
@@ -131,14 +132,14 @@
 					       priority:1
 					       isSticky:NO
 					   clickContext:nil];
-	}
+	}*/
 }
 
 
 - (void)meldeAktionFilter:(NSString *)titel mitNachricht:(NSString *)nachricht
 		   sticky:(BOOL)sticky hohePrioritaet:(BOOL)hohePrioritaet
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		[GrowlApplicationBridge notifyWithTitle:titel
 					     description:nachricht
 					notificationName:@"FilterAktion"
@@ -146,13 +147,13 @@
 						priority:hohePrioritaet ? 10 : 0
 						isSticky:sticky
 					    clickContext:nil];
-	}
+	}*/
 }
 
 
 - (void)meldeiBankExport:(int)buchungsAnzahl
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		[GrowlApplicationBridge notifyWithTitle:NSLocalizedString(@"iBank export", nil)
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Exporting %d transactions.", nil),
 							 buchungsAnzahl]
@@ -161,13 +162,13 @@
 					       priority:0
 					       isSticky:NO
 					   clickContext:nil];
-	}
+	}*/
 }
 
 
 - (void)meldeMoneywellExport:(int)buchungsAnzahl
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		[GrowlApplicationBridge notifyWithTitle:NSLocalizedString(@"Moneywell export", nil)
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Exporting %d transactions.", nil),
 							 buchungsAnzahl]
@@ -176,13 +177,13 @@
 					       priority:0
 					       isSticky:NO
 					   clickContext:nil];
-	}
+	}*/
 }
 
 
 - (void)meldeUniversalQifExport:(int)buchungsAnzahl theApp:(NSString *)app
 {
-	if ([GrowlApplicationBridge isGrowlRunning]) {
+	/*if ([GrowlApplicationBridge isGrowlRunning]) {
 		[GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:NSLocalizedString(@"%@ export", nil),app]
 					    description:[NSString stringWithFormat:NSLocalizedString(@"Exporting %d transactions.", nil),buchungsAnzahl]
 				       notificationName:@"MoneywellExports"
@@ -190,7 +191,7 @@
 					       priority:0
 					       isSticky:NO
 					   clickContext:nil];
-	}
+	}*/
 }
 
 @end

@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Growl/GrowlApplicationBridge.h"
+//#import "Growl/GrowlApplicationBridge.h"
 
 #import "Konto.h"
 #import "Kontoauszug.h"
 
-@interface GrowlController : NSObject<GrowlApplicationBridgeDelegate> {
+@interface GrowlController : NSObject/*<GrowlApplicationBridgeDelegate>*/ {
 	IBOutlet NSFormatter * saldoFormatter_;
 }
 
