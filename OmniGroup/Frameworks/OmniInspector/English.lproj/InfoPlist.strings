@@ -1,4 +1,0 @@
-/* Localized versions of Info.plist keys */
-
-CFBundleName = "OmniInspector";
-NSHumanReadableCopyright = "© The Omni Group, 2005";
