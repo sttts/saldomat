@@ -12,7 +12,7 @@
 @implementation SearchResultWindow
 
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag {
-	NSPanel * result = [super initWithContentRect:contentRect 
+	SearchResultWindow * result = [super initWithContentRect:contentRect
 					    styleMask:NSBorderlessWindowMask
 					      backing:NSBackingStoreBuffered 
 						defer:NO];
