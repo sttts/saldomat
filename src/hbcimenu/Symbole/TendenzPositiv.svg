@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="512"
+   height="512"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="TendenzPositiv.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/michael/Documents/Source/hbci/src/hbcimenu/Symbole/TendenzPositiv.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata3255">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="701"
+     inkscape:window-width="961"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.48632813"
+     inkscape:cx="190.18674"
+     inkscape:cy="262.02254"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3160">
+      <stop
+         style="stop-color:#007e06;stop-opacity:1;"
+         offset="0"
+         id="stop3162" />
+      <stop
+         id="stop3242"
+         offset="1"
+         style="stop-color:#2ccc35;stop-opacity:1;" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 256 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="512 : 256 : 1"
+       inkscape:persp3d-origin="256 : 170.66667 : 1"
+       id="perspective3257" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3160"
+       id="linearGradient3170"
+       x1="16.301785"
+       y1="254.50468"
+       x2="502.33582"
+       y2="254.50468"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-14.393574,10.281124)" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(8.7238234,-8.7238234)">
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:26.59700012;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3244"
+       width="607.7597"
+       height="553.96277"
+       x="-35.686478"
+       y="559.45276" />
+    <path
+       style="opacity:1;fill:url(#linearGradient3170);fill-opacity:1;fill-rule:evenodd;stroke:#00ad00;stroke-width:26.59700012;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 133.90676,492.48789 L 383.37864,236.67713 L 473.29374,319.86858 L 472.30704,37.083742 L 169.39895,37.274514 L 263.76271,128.98518 C 199.71456,193.51042 106.26557,281.78979 16.55671,372.26199 L 133.90676,492.48789 z"
+       id="path3157"
+       sodipodi:nodetypes="cccccccc" />
+  </g>
+</svg>

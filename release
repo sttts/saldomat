@@ -1,0 +1,17 @@
+#!/bin/sh
+
+. ./config
+
+if grep 'VERSIONRELEASE 1' src/svnrevision.h; then
+	echo Release
+	s3cmd -P -v put $DMG s3://$APPLOW
+	scp ${SRC}webversion limoia.com:/home/domains/limoia.com/http-appcasts/$APPLOW-version.php
+else
+	echo Beta
+	s3cmd -P -v put $DMG s3://$APPLOW/$APP-beta.dmg
+fi
+
+# Feed muss im Feeder von Hand nachgezogen werden
+#ssh limoia.com cp /home/domains/limoia.com/http-appcasts/$APPLOW-alpha.xml /home/domains/limoia.com/http-appcasts/$APPLOW.xml
+
+ls -l $DMG

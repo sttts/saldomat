@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Saldomat">
+	<!--
+		STANDARD SUITE
+	-->
+	<suite name="Standard Suite" code="core" description="Common classes and commands for all applications.">
+		<cocoa name="NSCoreSuite"/>
+		<enumeration name="save options" code="savo">
+			<enumerator name="yes" code="yes " description="Save the file."/>
+			<enumerator name="no" code="no  " description="Do not save the file."/>
+			<enumerator name="ask" code="ask " description="Ask the user whether or not to save the file."/>
+		</enumeration>
+		<class name="application" code="capp" description="The application&apos;s top-level scripting object.">
+			<cocoa class="Application"/>
+			<element type="window" access="r">
+				<cocoa key="orderedWindows"/>
+			</element>
+			<property name="name" code="pnam" description="The name of the application." type="text" access="r"/>
+			<property name="frontmost" code="pisf" description="Is this the frontmost (active) application?" type="boolean" access="r">
+				<cocoa key="isActive"/>
+			</property>
+			<property name="version" code="vers" description="The version of the application." type="text" access="r"/>
+			<responds-to command="quit">
+				<cocoa method="handleQuitScriptCommand:"/>
+			</responds-to>
+		</class>
+		<class name="item" code="cobj" description="A scriptable object.">
+			<cocoa class="AbstractObject"/>
+			<property name="class" code="pcls" description="The class of the object." type="type" access="r">
+				<cocoa key="classCode"/>
+			</property>
+			<property name="properties" code="pALL" description="All of the object&apos;s properties." type="record">
+				<cocoa key="scriptingProperties"/>
+			</property>
+			<!--
+						The blank method declarations are needed to emulate the existing
+						NSCoreSuite.scriptSuite.framework.  Ordinarily, you wouldn't do this.
+					-->
+			<responds-to command="count">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="delete">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="duplicate">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="exists">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="get">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="move">
+				<cocoa method=""/>
+			</responds-to>
+			<responds-to command="set">
+				<cocoa method=""/>
+			</responds-to>
+		</class>
+		<class name="color" code="colr" description="A color.">
+			<cocoa class="NSColor"/>
+		</class>
+		<class name="window" code="cwin" description="A window.">
+			<cocoa class="NSWindow"/>
+			<property name="name" code="pnam" description="The full title of the window." type="text" access="r">
+				<cocoa key="title"/>
+			</property>
+			<property name="id" code="ID  " description="The unique identifier of the window." type="integer" access="r">
+				<cocoa key="uniqueID"/>
+			</property>
+			<property name="index" code="pidx" description="The index of the window, ordered front to back." type="integer">
+				<cocoa key="orderedIndex"/>
+			</property>
+			<property name="closeable" code="hclb" description="Whether the window has a close box." type="boolean" access="r">
+				<cocoa key="hasCloseBox"/>
+			</property>
+			<property name="miniaturizable" code="ismn" description="Whether the window can be minimized." type="boolean" access="r">
+				<cocoa key="isMiniaturizable"/>
+			</property>
+			<property name="miniaturized" code="pmnd" description="Whether the window is currently minimized." type="boolean">
+				<cocoa key="isMiniaturized"/>
+			</property>
+			<property name="resizable" code="prsz" description="Whether the window can be resized." type="boolean" access="r">
+				<cocoa key="isResizable"/>
+			</property>
+			<property name="visible" code="pvis" description="Whether the window is currently visible." type="boolean">
+				<cocoa key="isVisible"/>
+			</property>
+			<property name="zoomable" code="iszm" description="Whether the window can be zoomed." type="boolean" access="r">
+				<cocoa key="isZoomable"/>
+			</property>
+			<property name="zoomed" code="pzum" description="Whether the window is currently zoomed." type="boolean">
+				<cocoa key="isZoomed"/>
+			</property>
+			<responds-to command="close">
+				<cocoa method="handleCloseScriptCommand:"/>
+			</responds-to>
+			<responds-to command="save">
+				<cocoa method="handleSaveScriptCommand:"/>
+			</responds-to>
+		</class>
+		<command name="close" code="coreclos" description="Close a document.">
+			<cocoa class="NSCloseCommand"/>
+			<direct-parameter description="the document(s) or window(s) to close." type="specifier"/>
+			<parameter name="saving" code="savo" description="Whether or not changes should be saved before closing." type="save options" optional="yes">
+				<cocoa key="SaveOptions"/>
+			</parameter>
+			<parameter name="saving in" code="kfil" description="The file in which to save the document." type="file" optional="yes">
+				<cocoa key="File"/>
+			</parameter>
+		</command>
+		<command name="save" code="coresave" description="Save a document.">
+			<direct-parameter description="The document(s) or window(s) to save." type="specifier"/>
+			<parameter name="in" code="kfil" description="The file in which to save the document." type="file" optional="yes">
+				<cocoa key="File"/>
+			</parameter>
+			<parameter name="as" code="fltp" description="The type of file to save." type="text" optional="yes">
+				<cocoa key="FileType"/>
+			</parameter>
+		</command>
+		<command name="quit" code="aevtquit" description="Quit the application.">
+			<cocoa class="NSQuitCommand"/>
+			<parameter name="saving" code="savo" description="Whether or not changed documents should be saved before closing." type="save options" optional="yes">
+				<cocoa key="SaveOptions"/>
+			</parameter>
+		</command>
+		<command name="count" code="corecnte" description="Return the number of elements of a particular class within an object.">
+			<cocoa class="NSCountCommand"/>
+			<direct-parameter description="the object whose elements are to be counted" type="specifier"/>
+			<parameter name="each" code="kocl" description="The class of objects to be counted." type="type" optional="yes">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<result description="the number of elements" type="integer"/>
+		</command>
+		<command name="delete" code="coredelo" description="Delete an object.">
+			<cocoa class="NSDeleteCommand"/>
+			<direct-parameter description="the object to delete" type="specifier"/>
+		</command>
+		<command name="duplicate" code="coreclon" description="Copy object(s) and put the copies at a new location.">
+			<cocoa class="NSCloneCommand"/>
+			<direct-parameter description="the object(s) to duplicate" type="specifier"/>
+			<parameter name="to" code="insh" description="The location for the new object(s)." type="location specifier">
+				<cocoa key="ToLocation"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" description="Properties to be set in the new duplicated object(s)." type="record" optional="yes">
+				<cocoa key="WithProperties"/>
+			</parameter>
+		</command>
+		<command name="make" code="corecrel" description="Make a new object.">
+			<cocoa class="FRCreateCommand"/>
+			<parameter name="new" code="kocl" description="The class of the new object." type="type">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<parameter name="at" code="insh" description="The location at which to insert the object." type="location specifier" optional="yes">
+				<cocoa key="Location"/>
+			</parameter>
+			<parameter name="with data" code="data" description="The initial contents of the object." type="any" optional="yes">
+				<cocoa key="ObjectData"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" description="The initial values for properties of the object." type="record" optional="yes">
+				<cocoa key="KeyDictionary"/>
+			</parameter>
+			<result description="to the new object" type="specifier"/>
+		</command>
+		<command name="move" code="coremove" description="Move object(s) to a new location.">
+			<cocoa class="NSMoveCommand"/>
+			<direct-parameter description="the object(s) to move" type="specifier"/>
+			<parameter name="to" code="insh" description="The new location for the object(s)." type="location specifier">
+				<cocoa key="ToLocation"/>
+			</parameter>
+		</command>
+		<command name="exists" code="coredoex" description="Verify if an object exists.">
+			<cocoa class="NSExistsCommand"/>
+			<direct-parameter description="the object in question" type="specifier"/>
+			<result description="true if it exists, false if not" type="boolean"/>
+		</command>
+		<!-- "get" is supposed to be hidden. -->
+		<command name="get" code="coregetd" description="Get the data for an object.">
+			<cocoa class="NSGetCommand"/>
+			<direct-parameter type="specifier"/>
+			<result type="any"/>
+		</command>
+		<!-- "set" is supposed to be hidden. -->
+		<command name="set" code="coresetd" description="Set an object&apos;s data.">
+			<cocoa class="NSSetCommand"/>
+			<direct-parameter type="specifier"/>
+			<!-- "set" is supposed to return the fully evaluated "to" data.
+				<result type="any"/>
+				-->
+			<parameter name="to" code="data" description="The new value." type="any">
+				<cocoa key="Value"/>
+			</parameter>
+		</command>
+	</suite>
+	<suite name="Saldomat" code="Bnkm" description="Saldomat AppleScript Interface">
+		<class name="account" code="Accn" description="A bank account.">
+			<cocoa class="Konto"/>
+			<element description="The transactions of this account." type="transactionitem" access="r">
+				<cocoa key="buchungenArray"/>
+				<accessor style="relative"/>
+				<accessor style="index"/>
+			</element>
+			<element description="Transactions of this account which are marked as new." type="new transactionitem" access="r">
+				<cocoa key="neueBuchungenArray"/>
+				<accessor style="relative"/>
+				<accessor style="index"/>
+			</element>
+			<property name="name" code="pnam" description="The user-defined description of the account which appears in the sidebars." type="text">
+				<cocoa key="bezeichnung"/>
+			</property>
+			<property name="login" code="Alog" description="The HBCI login which is usually the account number of the account." type="text" access="r">
+				<cocoa key="kennung"/>
+			</property>
+			<property name="bank number" code="Abnr" description="The bank identifier, e.g. a 8 digit number for German banks." type="text" access="r">
+				<cocoa key="bankleitzahl"/>
+			</property>
+			<property name="bank name" code="Anam" description="The name of the bank, coming from the database of banks in Saldomat." type="text" access="r">
+				<cocoa key="bankname"/>
+			</property>
+			<property name="balance" code="Abal" description="The current balance of your account." type="real" access="r">
+				<cocoa key="saldo"/>
+			</property>
+			<property name="account number" code="Aknr" description="The account number for this account. This is either equal to login or the number of the selected subaccount in Saldomat." type="text" access="r">
+				<cocoa key="unterkonto"/>
+			</property>
+			<property name="server" code="Asvr" description="The HBCI server of this account." type="text" access="r">
+				<cocoa key="server"/>
+			</property>
+			<property name="warn balance" code="Awrn" description="The balance when the account will trigger a red Euro sign in the menu as a warning of a low balance." type="real" access="r">
+				<cocoa key="warnSaldo"/>
+			</property>
+			<property name="id" code="ID  " description="The unique identifier of the account." type="text" access="r">
+				<cocoa key="guid"/>
+			</property>
+		</class>
+		<class name="transactionitem" code="Tran" description="A transaction of an account." plural="transactionitems">
+			<cocoa class="Buchung"/>
+			<property name="remote bank number" code="Trnr" description="The bank identifier of the remote bank." type="text" access="r">
+				<cocoa key="andereBank"/>
+			</property>
+			<property name="remote name" code="Trna" description="The name of the person of the transaction that is the addressee or the origin of the transaction." type="text" access="r">
+				<cocoa key="andererName"/>
+			</property>
+			<property name="remote account number" code="Trac" description="The the account number of the remote person." type="text" access="r">
+				<cocoa key="anderesKonto"/>
+			</property>
+			<property name="date" code="Tdat" description="The date this transaction is booked." type="date" access="r">
+				<cocoa key="datum"/>
+			</property>
+			<property name="color" code="Tcol" description="The color of this transaction the table view in Saldomat. The format is the usual hexadecimal #123456 format common in e.g. HTML." type="text" access="r">
+				<cocoa key="farbe"/>
+			</property>
+			<property name="new" code="Tnew" description="True if the transaction is shown as new, i.e. shown with a blue icon in the table view of Saldomat." type="boolean">
+				<cocoa key="neu"/>
+			</property>
+			<property name="primanota" code="Tprm" description="The prima nota of this transaction." type="text" access="r">
+				<cocoa key="primaNota"/>
+			</property>
+			<property name="purpose" code="Tpur" description="The purpose string of the transaction, usually given by the remote person to describe the transaction." type="text" access="r">
+				<cocoa key="zweck"/>
+			</property>
+			<property name="owning account" code="Tacc" description="The account this transaction belongs to." type="account" access="r">
+				<cocoa key="konto"/>
+			</property>
+			<property name="id" code="ID  " description="The unique identifier of the transaction." type="text" access="r">
+				<cocoa key="guid"/>
+			</property>
+			<property name="value" code="Tval" description="The value of the transaction." type="real" access="r">
+				<cocoa key="wert"/>
+			</property>
+			<property name="absolute value" code="Tabv" description="The absolute value, i.e. without the sign -/+." type="real" access="r">
+				<cocoa key="betrag"/>
+			</property>
+			<property name="name" code="pnam" description="The description of the transaction consisting of the remote name followed by the purpose." type="text" access="r">
+				<cocoa key="andererNameUndZweck"/>
+			</property>
+			<property name="art" code="Tart" description="The kind of transaction, e.g. cash machine, bank transfer etc." type="text" access="r">
+				<cocoa key="art"/>
+			</property>
+		</class>
+		<class name="application" code="capp" description="The application&apos;s top-level scripting object.">
+			<cocoa class="Application"/>
+			<element description="The accounts which are defined in Saldomat" type="account" access="r">
+				<cocoa key="kontenArray"/>
+				<accessor style="relative"/>
+				<accessor style="range"/>
+				<accessor style="name"/>
+				<accessor style="id"/>
+				<accessor style="index"/>
+			</element>
+			<responds-to command="sync all">
+				<cocoa method="scriptSyncAll:"/>
+			</responds-to>
+			<responds-to command="sync">
+				<cocoa method="scriptSyncKonto:"/>
+			</responds-to>
+		</class>
+		<class name="new transactionitem" code="NTra" plural="new transactionitems" inherits="transactionitem">
+			<cocoa class="Buchung"/>
+		</class>
+		<command name="sync all" code="SyncAllA" description="Synchronize all accounts with the respective bank."/>
+		<command name="sync" code="SyncAcct" description="Synchronize the transactions of this account with the bank.">
+			<parameter name="account" code="SyAc" description="The account to synchronize." type="account">
+				<cocoa key="konto"/>
+			</parameter>
+		</command>
+	</suite>
+</dictionary>

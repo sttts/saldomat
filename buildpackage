@@ -1,0 +1,69 @@
+#!/bin/sh
+
+set -e
+
+EXT=app
+DMG_TARGET=Release
+UPDATE_TARGET=Release
+SRC=
+APP_LINK_IN_DMG=1
+
+. ./config
+
+UDMG="uncompressed_$DMG"                                                                                                                         
+TAR=`pwd`/${APP}_$VERSION.tar                                                                                                                    
+ZIP=`pwd`/${APP}_$VERSION.zip
+
+rm -f $DMG $DMG.bz2 $UDMG $TAR $TAR.bz2 $ZIP
+
+# unmounten
+if [ -e /Volumes/$APP ]; then
+    umount -f /Volumes/$APP
+    sleep 2
+    if [ -e /Volumes/$APP ]; then
+	echo /Volumes/$APP noch gemountet. Abbruch...
+	exit 1
+    fi
+fi
+
+# dmg erzeugen
+hdiutil create -size 50m -type UDIF -fs HFS+ -volname $APP -ov $UDMG
+hdid $UDMG
+if [ ! -e /Volumes/$APP ]; then
+    echo /Volumes/$APP mountet nicht. Abbruch...
+    ls -l /Volumes
+    exit 1
+fi
+
+ditto ${SRC}build/$DMG_TARGET/$APP.$EXT /Volumes/$APP/$APP.$EXT
+cp -f dmg/dmgbg.png /Volumes/$APP/dmgbg.png
+/Developer/Tools/SetFile -a V /Volumes/$APP/dmgbg.png
+cp -f dmg/DS_Store /Volumes/$APP/.DS_Store
+if [ $APP_LINK_IN_DMG = 1 ]; then
+    ln -s /Applications /Volumes/$APP/Applications
+fi
+hdiutil eject /Volumes/$APP
+hdiutil convert -ov -format UDBZ $UDMG -o $DMG
+
+# tbz erstellen
+if [ "$UPDATE_FORMAT" = "tbz" ]; then
+    echo "Erstelle ${APP}_$VERSION.tar"
+    (cd ${SRC}build/$UPDATE_TARGET; tar -cf $TAR $APP.$EXT)
+    echo "Komprimiere mit bzip2"
+    bzip2 -9 $TAR
+    mv $TAR.bz2 ${APP}_$VERSION.tbz
+else
+    # Zip erstellen
+    echo "Erstelle ${APP}_$VERSION.zip"
+    (cd ${SRC}build/$UPDATE_TARGET; zip -9 -r ../../../$APP.zip $APP.$EXT)
+    mv $APP.zip ${APP}_$VERSION.zip
+fi
+
+# tbz signieren
+#openssl dgst -sha1 -binary < $APP_$VERSION.tbz \
+#    | openssl dgst -dss1 -sign ~/.$APP-sparkle-priv.pem \
+#    | openssl enc -base64
+
+# Debug-Symbole sichern
+tar -cvjf symbols_$VERSION.tar.bz2 ${SRC}build/$UPDATE_TARGET/*.dSYM ${SRC}build/$DMG_TARGET/*.dSYM
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TicketVersion</key>
+	<string>1</string>
+	<key>AllNotifications</key>
+	<array>
+		<string>SaldoWarnung</string>
+		<string>NeueBuchungenEmpfangen</string>
+		<string>KeineNeuenBuchungenEmpfangen</string>
+		<string>AlteBuchungenWerdenGeloescht</string>
+		<string>KontoauszugsFehler</string>
+		<string>FilterAktion</string>
+		<string>iBankExports</string>
+		<string>MoneywellExports</string>
+	</array>
+	<key>HumanReadableNames</key>
+	<dict>
+		<key>SaldoWarnung</key>
+		<string>Saldowarnung</string>
+		<key>NeueBuchungenEmpfangen</key>
+		<string>Neue Buchungen empfangen</string>
+		<key>KeineNeuenBuchungenEmpfangen</key>
+		<string>Keine neuen Buchungen empfangen</string>
+		<key>AlteBuchungenWerdenGeloescht</key>
+		<string>Alte Buchungen werden gelöscht</string>
+		<key>KontoauszugsFehler</key>
+		<string>Fehler beim Kontoauszug</string>
+		<key>FilterAktion</key>
+		<string>Aktion eines Filters</string>
+		<key>iBankExports</key>
+		<string>iBank-Export</string>
+		<key>MoneywellExports</key>
+		<string>Moneywell-Export</string>
+	</dict>
+	<key>NotificationDescriptions</key>
+	<dict>
+		<key>SaldoWarnung</key>
+		<string>Der Warnsaldo eines Kontos wurde unterschritten.</string>
+		<key>NeueBuchungenEmpfangen</key>
+		<string>Ein Kontoauszug hat neue Buchungen gefunden.</string>
+		<key>KeineNeuenBuchungenEmpfangen</key>
+		<string>Ein Kontoauszug hat nur alte Buchungen gefunden.</string>
+		<key>AlteBuchungenWerdenGeloescht</key>
+		<string>Alte Buchungen werden nach eine eingestellten Zeit nicht mehr aufbewahrt.</string>
+		<key>KontoauszugsFehler</key>
+		<string>Bei einem Kontoauszug ist ein Fehler aufgetreten</string>
+		<key>FilterAktion</key>
+		<string>Growl-Aktion eines Filters</string>
+		<key>iBankExports</key>
+		<string>Buchungen werden nach iBank exportiert</string>
+		<key>MoneywellExports</key>
+		<string>Buchungen werden nach Moneywell exportiert</string>
+	</dict>
+	<key>DefaultNotifications</key>
+	<array>
+		<string>NeueBuchungenEmpfangen</string>
+		<string>SaldoWarnung</string>
+		<string>KontoauszugsFehler</string>
+		<string>FilterAktion</string>
+		<string>iBankExports</string>
+		<string>MoneywellExports</string>
+	</array>
+</dict>
+</plist>

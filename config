@@ -1,0 +1,9 @@
+VERSION=`cat src/revision`
+APP=Saldomat
+APPLOW=saldomat
+EXT=app
+DMG="$APP.dmg"
+UPDATE_FORMAT=tbz
+SRC=src/
+DMG_TARGET=Release-growl-installer
+UPDATE_TARGET=Release

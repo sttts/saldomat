@@ -1,0 +1,22 @@
+#!/bin/sh
+
+CSV_FILE=$1
+ZIEL=$2
+
+# Eingabe vergessen?
+if [ ! $CSV_FILE ] || [ ! $ZIEL ]; then
+	echo "usage: csv2Symlink <csv-file> <symlink-to>"
+	exit 0
+else
+	# Datei nicht gefunden
+	if [ ! -f $CSV_FILE ]; then
+		echo "${CSV_FILE} not found."
+		exit 0
+	else
+		if [ ! -f $ZIEL ]; then
+			echo "${ZIEL} not found."
+			exit 0
+		fi
+	fi
+fi
+

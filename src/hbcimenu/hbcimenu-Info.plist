@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>de</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>saldomatlicense</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>APPL.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-saldomatlicense</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>SaldomatLicense</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>????</string>
+			</array>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>Binary</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Saldomat RAWVERSION</string>
+	<key>CFBundleIconFile</key>
+	<string>APPL</string>
+	<key>CFBundleIdentifier</key>
+	<string>BUNDLEIDENTIFIER</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>RAWPUBLICVERSION</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>RAWVERSION</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5</string>
+	<key>NSAppleScriptEnabled</key>
+	<true/>
+	<key>NSMainNibFile</key>
+	<string>hbcimenu</string>
+	<key>NSPrincipalClass</key>
+	<string>Application</string>
+	<key>OSAScriptingDefinition</key>
+	<string>suite.sdef</string>
+	<key>SUExpectsDSASignature</key>
+	<true/>
+	<key>LSUIElement</key>
+	<string>1</string>
+	<key>SUFeedURL</key>
+	<string>http://appcasts.limoia.com/saldomat.xml</string>
+	<key>SUPublicDSAKey</key>
+	<string>-----BEGIN PUBLIC KEY-----
+MIIDOzCCAi0GByqGSM44BAEwggIgAoIBAQDUK6If67YknpuJ6VFvoqh2p3qr5v5A
+1NY4MH9Cst18yHhY3y1jcThYe9F00u3OsAhnJNnkZIOlFqHvVlYQjm6Y60ZeX/V2
+nW+IPbt/XORkQEXk7anhb0m7F1G9lhmnvg/ROa1sKhwhJBy92F6ujoU9UKB89IJo
+ymW5mtLBLoutaakaGghO9k5SIUxiEtIuDwqoIhMfyyn+4cw7Ymauusmh/jJx8p+F
+QlBGA8lNs9Qf56Ygw9JKVL1fwzqwxeMVZRRqYFq48fDl1pdr2KkCUhJoNbIzJb1w
+zNyZa5N5GiXdxlknq4A/IfsgjbXhe6wmcQHnvj5Ry2LnMtzdPEIt79MjAhUAmdoe
+Cj9eqsB9CWe+qdNkZxT8qgECggEAfpW2F3BVYpWBRKryGxouNG83rtMmMc8qLXdN
+nOzKmZEtlqAYky4JhKrb/xS6IQXqXp7iw8E19MPZSPMfC7sTLB3+h2aB7toXFEsP
+2vyRpZe1kwEYbxKW3ySsNIYlz6QizZQaOz1Dpeuva6Rk/IlM4Vi/nF7F6pBQgpOU
+tK2ZpvhqrSPqDDNA2hOq0UYTVjURnT3HGxq+wRygbXyJ80x9Br81TZABHwwp/JAO
+LRUPZmJVXzGHnWAc34b4CE3ybh7nSk+1S0vRie2xSOw4NzqdJrzpnumn/0NyMlEm
+iuObo32e00XjHHcO8OILp2IbsElZw/0WfHolIpXFkIPgfmJxVwOCAQYAAoIBAQDE
+dInpkFn328JlzHlca0ilWNM7N27F3HnDSEDLbd5U9IE5YcORsn0ZXuoAy0TbOrUo
+oRkeeEjAAw3zP7NsacJ++73Qv/cW/v95d0CPFkJRRnxsJMnpHfoP/AvbvFjxO/dQ
+mYekAizNVik/SfpHVfs+P1BHbbiYsymguN4nYaDWehmXHzDvYHUhrasjg6dFt5MJ
+ZNa1YATduX43U2vlbtaNig6ImzqH+4i+fMY4dbjvWRx+C6KZhEPOVSR2WKPzlfe5
+PWCunzM5KvF9KgJGKq5O8cqVRaDCYLeAZFXF0JPXUJ7TFBIGBMh4eOhydmIpDUBV
+O+uOxY0/X6ZwCzDuCnsS
+-----END PUBLIC KEY-----
+</string>
+</dict>
+</plist>

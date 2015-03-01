@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="25"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="Buttonleiste fehler.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/michael/Documents/Source/hbci/src/hbcimenu/Symbole/Buttonleiste fehler.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3158">
+      <stop
+         style="stop-color:#8d0808;stop-opacity:1;"
+         offset="0"
+         id="stop3160" />
+      <stop
+         style="stop-color:#3c0404;stop-opacity:0;"
+         offset="1"
+         id="stop3162" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3158"
+       id="linearGradient3164"
+       x1="33.487511"
+       y1="12.372027"
+       x2="179.59782"
+       y2="12.372027"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.822023,0,0,0.9323308,-27.527504,0.9307454)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.3452763"
+     inkscape:cx="0.73212134"
+     inkscape:cy="3.6377081"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1338"
+     inkscape:window-height="933"
+     inkscape:window-x="0"
+     inkscape:window-y="22" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:url(#linearGradient3164);fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2386"
+       width="266.21637"
+       height="23.198051"
+       x="33.487511"
+       y="0.86654222"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.24953699;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2385"
+       width="150.18665"
+       height="63.942272"
+       x="-17.09819"
+       y="54.22905" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#2f2f2f;stroke-width:1.50043452;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 12.5 0.75 C 6.0141209 0.75000003 0.75 6.0141197 0.75 12.5 C 0.75000001 18.985881 6.0141204 24.25 12.5 24.25 C 12.755874 24.25 12.998178 24.234887 13.25 24.21875 L 13.25 24.25 L 286.75 24.25 L 286.75 24.21875 C 287.00182 24.234887 287.24413 24.25 287.5 24.25 C 293.98588 24.25 299.25 18.98588 299.25 12.5 C 299.24999 6.0141201 293.98588 0.75 287.5 0.75 C 287.24413 0.75 287.00182 0.76511292 286.75 0.78125 L 286.75 0.75 L 13.25 0.75 L 13.25 0.78125 C 12.998178 0.76511292 12.755874 0.75 12.5 0.75 z "
+       id="path3825" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#757575;stroke-width:0.93001735px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 35.545399,3.292852 L 35.545399,21.754067"
+       id="path3834" />
+  </g>
+</svg>

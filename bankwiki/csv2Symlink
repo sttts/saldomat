@@ -1,0 +1,45 @@
+#!/bin/sh
+
+CSV_FILE=$1
+ZIEL=$2
+
+# Eingabe vergessen?
+if [ -z $CSV_FILE ] || [ -z $ZIEL ]; then
+	echo "usage: csv2Symlink <csv-file> <symlink-to>"
+	exit 0
+else
+	# Datei nicht gefunden
+	if [ ! -f $CSV_FILE ]; then
+		echo "${CSV_FILE} not found."
+		exit 0
+	else
+		if [ ! -f $ZIEL ]; then
+			echo "${ZIEL} not found."
+			exit 0
+		fi
+	fi
+
+	while read line; do
+		if [ -h Bank.$line ]; then
+				echo
+				echo "\033[1m# Ersetze Symlink Bank.$line.\033[0m"
+				#ls -l Bank.$line
+				rm -f Bank.$line
+				ln -s $ZIEL Bank.$line
+				#ls -l Bank.$line
+		else
+			if [ -f Bank.$line ]; then
+			 	echo
+				echo "\033[1m# Bank.$line bereits als Datei vorhanden.\033[0m"
+				#echo "# Bank.$line bereits als Datei vorhanden."
+			else
+				#echo "\033[1mErzeuge Bank.$line.\033[0m"
+				ln -s $ZIEL Bank.$line
+				
+			fi
+		fi
+		
+	done < $CSV_FILE
+	
+	exit 0
+fi

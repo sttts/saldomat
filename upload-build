@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. ./config
+
+s3cmd -P -v put ${APP}_$VERSION.$UPDATE_FORMAT s3://$APPLOW
+ls -l ${APP}_$VERSION.$UPDATE_FORMAT
+cat ${SRC}version
+
+#ssh limoia.com 'cd /home/git; echo $[`cat hbci-version` + 1] > hbci-version.neu; mv hbci-version.neu hbci-version; cat hbci-version' \
+#    > hbci-version

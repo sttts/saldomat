@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<!--
+Definitions for script commands in OmniFoundation.  These can be included in your application's sdef by its build process (say by using XSL to merge multiple sdef files).
+-->
+<dictionary title="OmniFoundation">
+	<suite name="OmniFoundation Scripting" code="OFss" description="OmniFoundation scripting support.">
+		<cocoa name="OmniFoundation"/>
+
+		<command name="add" code="OFssiadd" description="Add the given object(s) to the container.">
+			<cocoa class="OFAddScriptCommand"/>
+			<direct-parameter description="the object(s) to add.">
+				<type type="specifier" list="yes"/>
+				<type type="specifier"/>
+			</direct-parameter>
+			<parameter name="to" code="to  " description="The container to which to add the object.">
+				<cocoa key="ToContainer"/>
+				<type type="specifier"/>
+			</parameter>
+		</command>
+		<command name="remove" code="OFssremv" description="Remove the given object(s) from the container.">
+			<cocoa class="OFRemoveScriptCommand"/>
+			<direct-parameter description="the object(s) to remove.">
+				<type type="specifier" list="yes"/>
+				<type type="specifier"/>
+			</direct-parameter>
+			<parameter name="from" code="from" description="The container from which to remove the object.">
+				<cocoa key="FromContainer"/>
+				<type type="specifier"/>
+			</parameter>
+		</command>
+
+	</suite>
+</dictionary>

@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		388837560F4B36BD00D81039 /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 388837550F4B36BD00D81039 /* Version.m */; };
+		3888376E0F4B36CF00D81039 /* hbcitool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388837580F4B36CF00D81039 /* hbcitool.xib */; };
+		3888376F0F4B36CF00D81039 /* InputWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3888375A0F4B36CF00D81039 /* InputWindow.xib */; };
+		388837700F4B36CF00D81039 /* PinWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3888375C0F4B36CF00D81039 /* PinWindow.xib */; };
+		388837710F4B36CF00D81039 /* CocoaBanking.m in Sources */ = {isa = PBXBuildFile; fileRef = 388837600F4B36CF00D81039 /* CocoaBanking.m */; };
+		388837720F4B36CF00D81039 /* CocoaBankingGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 388837620F4B36CF00D81039 /* CocoaBankingGui.m */; };
+		388837730F4B36CF00D81039 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 388837630F4B36CF00D81039 /* COPYING */; };
+		388837740F4B36CF00D81039 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 388837640F4B36CF00D81039 /* Localizable.strings */; };
+		388837760F4B36CF00D81039 /* hbcitoolmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 388837690F4B36CF00D81039 /* hbcitoolmain.m */; };
+		388837770F4B36CF00D81039 /* InputWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888376B0F4B36CF00D81039 /* InputWindowController.m */; };
+		388837780F4B36CF00D81039 /* MessageBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888376D0F4B36CF00D81039 /* MessageBoxController.m */; };
+		388837D70F4B382400D81039 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388837D60F4B382400D81039 /* Security.framework */; };
+		388837D90F4B382400D81039 /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388837D80F4B382400D81039 /* SecurityFoundation.framework */; };
+		388837DB0F4B382400D81039 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388837DA0F4B382400D81039 /* SecurityInterface.framework */; };
+		388837DD0F4B382400D81039 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388837DC0F4B382400D81039 /* SystemConfiguration.framework */; };
+		388838030F4B38F200D81039 /* Schloss.icns in Resources */ = {isa = PBXBuildFile; fileRef = 388838010F4B38F200D81039 /* Schloss.icns */; };
+		388838040F4B38F200D81039 /* Zertifikat120.png in Resources */ = {isa = PBXBuildFile; fileRef = 388838020F4B38F200D81039 /* Zertifikat120.png */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* hbcitool-GPL-source_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hbcitool-GPL-source_Prefix.pch"; sourceTree = "<group>"; };
+		388837500F4B36BD00D81039 /* CocoaBankingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBankingProtocol.h; sourceTree = "<group>"; };
+		388837510F4B36BD00D81039 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		388837520F4B36BD00D81039 /* Konto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Konto.h; sourceTree = "<group>"; };
+		388837530F4B36BD00D81039 /* svnrevision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svnrevision.h; sourceTree = "<group>"; };
+		388837540F4B36BD00D81039 /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
+		388837550F4B36BD00D81039 /* Version.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Version.m; sourceTree = "<group>"; };
+		388837590F4B36CF00D81039 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = hbcitool.xib; sourceTree = "<group>"; };
+		3888375B0F4B36CF00D81039 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = InputWindow.xib; sourceTree = "<group>"; };
+		3888375D0F4B36CF00D81039 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = PinWindow.xib; sourceTree = "<group>"; };
+		3888375F0F4B36CF00D81039 /* CocoaBanking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBanking.h; sourceTree = "<group>"; };
+		388837600F4B36CF00D81039 /* CocoaBanking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBanking.m; sourceTree = "<group>"; };
+		388837610F4B36CF00D81039 /* CocoaBankingGui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBankingGui.h; sourceTree = "<group>"; };
+		388837620F4B36CF00D81039 /* CocoaBankingGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaBankingGui.m; sourceTree = "<group>"; };
+		388837630F4B36CF00D81039 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		388837650F4B36CF00D81039 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		388837660F4B36CF00D81039 /* German */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		388837670F4B36CF00D81039 /* hbci_l.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hbci_l.h; sourceTree = "<group>"; };
+		388837680F4B36CF00D81039 /* hbcitool-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "hbcitool-Info.plist"; sourceTree = "<group>"; };
+		388837690F4B36CF00D81039 /* hbcitoolmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hbcitoolmain.m; sourceTree = "<group>"; };
+		3888376A0F4B36CF00D81039 /* InputWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputWindowController.h; sourceTree = "<group>"; };
+		3888376B0F4B36CF00D81039 /* InputWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputWindowController.m; sourceTree = "<group>"; };
+		3888376C0F4B36CF00D81039 /* MessageBoxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBoxController.h; sourceTree = "<group>"; };
+		3888376D0F4B36CF00D81039 /* MessageBoxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBoxController.m; sourceTree = "<group>"; };
+		388837D60F4B382400D81039 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		388837D80F4B382400D81039 /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
+		388837DA0F4B382400D81039 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
+		388837DC0F4B382400D81039 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		388838010F4B38F200D81039 /* Schloss.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Schloss.icns; path = hbcimenu/Symbole/Schloss.icns; sourceTree = "<group>"; };
+		388838020F4B38F200D81039 /* Zertifikat120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zertifikat120.png; path = hbcimenu/Symbole/Zertifikat120.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* hbcitool-GPL-source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hbcitool-GPL-source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				388837D70F4B382400D81039 /* Security.framework in Frameworks */,
+				388837D90F4B382400D81039 /* SecurityFoundation.framework in Frameworks */,
+				388837DB0F4B382400D81039 /* SecurityInterface.framework in Frameworks */,
+				388837DD0F4B382400D81039 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* hbcitool-GPL-source.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* hbcitool-GPL-source */ = {
+			isa = PBXGroup;
+			children = (
+				388838010F4B38F200D81039 /* Schloss.icns */,
+				388838020F4B38F200D81039 /* Zertifikat120.png */,
+				388837570F4B36CF00D81039 /* German.lproj */,
+				3888375E0F4B36CF00D81039 /* hbcitool */,
+				388837500F4B36BD00D81039 /* CocoaBankingProtocol.h */,
+				388837510F4B36BD00D81039 /* debug.h */,
+				388837520F4B36BD00D81039 /* Konto.h */,
+				388837530F4B36BD00D81039 /* svnrevision.h */,
+				388837540F4B36BD00D81039 /* Version.h */,
+				388837550F4B36BD00D81039 /* Version.m */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				388837D60F4B382400D81039 /* Security.framework */,
+				388837D80F4B382400D81039 /* SecurityFoundation.framework */,
+				388837DA0F4B382400D81039 /* SecurityInterface.framework */,
+				388837DC0F4B382400D81039 /* SystemConfiguration.framework */,
+			);
+			name = "hbcitool-GPL-source";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* hbcitool-GPL-source_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		388837570F4B36CF00D81039 /* German.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				388837580F4B36CF00D81039 /* hbcitool.xib */,
+				3888375A0F4B36CF00D81039 /* InputWindow.xib */,
+				3888375C0F4B36CF00D81039 /* PinWindow.xib */,
+			);
+			path = German.lproj;
+			sourceTree = "<group>";
+		};
+		3888375E0F4B36CF00D81039 /* hbcitool */ = {
+			isa = PBXGroup;
+			children = (
+				3888375F0F4B36CF00D81039 /* CocoaBanking.h */,
+				388837600F4B36CF00D81039 /* CocoaBanking.m */,
+				388837610F4B36CF00D81039 /* CocoaBankingGui.h */,
+				388837620F4B36CF00D81039 /* CocoaBankingGui.m */,
+				388837630F4B36CF00D81039 /* COPYING */,
+				388837640F4B36CF00D81039 /* Localizable.strings */,
+				388837670F4B36CF00D81039 /* hbci_l.h */,
+				388837680F4B36CF00D81039 /* hbcitool-Info.plist */,
+				388837690F4B36CF00D81039 /* hbcitoolmain.m */,
+				3888376A0F4B36CF00D81039 /* InputWindowController.h */,
+				3888376B0F4B36CF00D81039 /* InputWindowController.m */,
+				3888376C0F4B36CF00D81039 /* MessageBoxController.h */,
+				3888376D0F4B36CF00D81039 /* MessageBoxController.m */,
+			);
+			path = hbcitool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* hbcitool-GPL-source */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "hbcitool-GPL-source" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				388838660F4B3BC100D81039 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hbcitool-GPL-source";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "hbcitool-GPL-source";
+			productReference = 8D1107320486CEB800E47090 /* hbcitool-GPL-source.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "hbcitool-GPL-source" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* hbcitool-GPL-source */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* hbcitool-GPL-source */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3888376E0F4B36CF00D81039 /* hbcitool.xib in Resources */,
+				3888376F0F4B36CF00D81039 /* InputWindow.xib in Resources */,
+				388837700F4B36CF00D81039 /* PinWindow.xib in Resources */,
+				388837730F4B36CF00D81039 /* COPYING in Resources */,
+				388837740F4B36CF00D81039 /* Localizable.strings in Resources */,
+				388838030F4B38F200D81039 /* Schloss.icns in Resources */,
+				388838040F4B38F200D81039 /* Zertifikat120.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		388838660F4B3BC100D81039 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DESTDIRREL=Frameworks/AqBanking\nDESTDIR=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/$DESTDIRREL\"\nrsync -avx --delete --delete-excluded --exclude us --exclude ca --exclude ch --exclude man --exclude info --exclude aclocal ../lib/static-build-i386/share \"$DESTDIR\"\n\nif [ $ARCHS == ppc ]; then\n\texport archdir=ppc\nelif [ $BUILD_STYLE == Debug ]; then\n\texport archdir=debug\nelse\n\texport archdir=i386\nfi \n\n# Plugins rueberkopieen\nmkdir -p \"$DESTDIR/lib\"\nrsync -auvx --delete --delete-excluded --exclude '*.a' --exclude '*.la' ../lib/static-build-$archdir/lib/aqbanking \"$DESTDIR/lib\"\nrsync -auvx --delete --delete-excluded --exclude '*.a' --exclude '*.la' ../lib/static-build-$archdir/lib/gwenhywfar \"$DESTDIR/lib\"\n\n# Links erstellen, damit dlopen die Libs finden ohne Endung\nfind \"$DESTDIR/lib\" -name \"*.so\" | \\\nwhile read l; do \\\n\tdir=`dirname \"$l\"`\n\tbase=`basename \"$l\" .so`\n\tln -s \"$base.so\" \"$dir/$base\"\ndone\n\n#set -x\n\n# Dynamische Bibliotheken kopieren\nsdir=\"../lib/static-build-$archdir/lib\"\nsdir=`cd \"$sdir\"; pwd -P`\nsdir=`echo \"$sdir\" | sed 's#^.*/\\([^/]*/[^/]*/[^/]*\\)$#\\1#'` # letzten 3 Pfadteile vom ldir ausschneiden\n\nfunction makeRelocatable {\n\tprefix=$3\n\techo \"$prefix Checking referenced dylibs of $1\"\n\totool -L \"$1\" | tail -n +2 | awk '{ print $1; }' | \\\n\twhile read l; do \\\n\t\tldir=`dirname \"$l\"`\n\t\tlname=`basename \"$l\"`\n\n\t\t# letzten 3 Pfadteile vom ldir ausschneiden\n\t\tldir=`echo \"$ldir\" | sed 's#^.*/\\([^/]*/[^/]*/[^/]*\\)$#\\1#'`\n\n\t\t# letzten 3 Pfadteile vergleichen\n\t\tif [ \"$ldir\" == \"$sdir\" ]; then\n\t\t\techo \"$prefix Updating reference $l\"\n\n\t\t\t# Verweise im Executable auf dylib anpassen\n\t\t\tinstall_name_tool -change \"$l\" \"@executable_path/../Resources/$DESTDIRREL/lib/$lname\" \"$1\"\n\n\t\t\t# $2/$lname existiert und ist neuer als das Original?\n\t\t\tif [ \"$2/$lname\" -nt \"../$sdir/$lname\" ]; then\n\t\t\t\techo \"$prefix $2/$lname already uptodate\"\n\t\t\telse\n\t\t\t\techo \"$prefix Copying ../$sdir/$lname to $2\"\n\n\t\t\t\t# Dylib kopieren\n\t\t\t\tcp -a \"../$sdir/$lname\" \"$2\"\n\t\t\t\tif [ -d \"../$sdir/$lname.dSYM\" ]; then \n\t\t\t\t\tcp -a \"../$sdir/$lname.dSYM\" \"$2\"\n\t\t\t\tfi\t\n\t\t\t\tmakeRelocatable \"$2/$lname\" \"$2\" \"$prefix*\"\n\t\t\tfi\n\t\tfi\n\tdone\n\n\techo \"$prefix Finished $1\"\n}\n\nmakeRelocatable \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\" \"$DESTDIR/lib\" \"*\"\n\n# Plugins relokierbar machen\nfind \"$DESTDIR/lib\" -name \"*.so\" | \\\nwhile read l; do\n\tmakeRelocatable \"$l\" \"$DESTDIR/lib\" \"*\"\ndone";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388837560F4B36BD00D81039 /* Version.m in Sources */,
+				388837710F4B36CF00D81039 /* CocoaBanking.m in Sources */,
+				388837720F4B36CF00D81039 /* CocoaBankingGui.m in Sources */,
+				388837760F4B36CF00D81039 /* hbcitoolmain.m in Sources */,
+				388837770F4B36CF00D81039 /* InputWindowController.m in Sources */,
+				388837780F4B36CF00D81039 /* MessageBoxController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		388837580F4B36CF00D81039 /* hbcitool.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388837590F4B36CF00D81039 /* German */,
+			);
+			name = hbcitool.xib;
+			sourceTree = "<group>";
+		};
+		3888375A0F4B36CF00D81039 /* InputWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3888375B0F4B36CF00D81039 /* German */,
+			);
+			name = InputWindow.xib;
+			sourceTree = "<group>";
+		};
+		3888375C0F4B36CF00D81039 /* PinWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3888375D0F4B36CF00D81039 /* German */,
+			);
+			name = PinWindow.xib;
+			sourceTree = "<group>";
+		};
+		388837640F4B36CF00D81039 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388837650F4B36CF00D81039 /* English */,
+				388837660F4B36CF00D81039 /* German */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hbcitool-GPL-source_Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../lib/static-build-debug/include/aqbanking5",
+					"$(PROJECT_DIR)/../lib/static-build-debug/include/gwenhywfar4",
+					"$(PROJECT_DIR)/../lib/static-build-debug/include",
+				);
+				INFOPLIST_FILE = "hbcitool/hbcitool-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
+				INFOPLIST_PREFIX_HEADER = svnrevision.h;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../lib/static-build-debug/lib/gwenhywfar/**",
+					"$(PROJECT_DIR)/../lib/static-build-debug/lib/aqbanking/**",
+					"$(PROJECT_DIR)/../lib/static-build-debug/lib",
+				);
+				OTHER_CFLAGS = "-DDEBUG";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"hbcitool/hbcitool-Info.plist",
+					"-lz",
+					"-lcharset",
+					"-lintl",
+					"-liconv",
+					"-lgmp",
+					"-lgpg-error",
+					"-lgcrypt",
+					"-lgnutls",
+					"-lgnutls-extra",
+					"-lgnutls-openssl",
+					"-lgwenhywfar",
+					"-laqbanking",
+					"-laqhbci",
+					"-laqb_plugins",
+					"-lgwen_plugins",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = "hbcitool-GPL-source";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hbcitool-GPL-source_Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../lib/static-build-i386/include/aqbanking5",
+					"$(PROJECT_DIR)/../lib/static-build-i386/include/gwenhywfar4",
+					"$(PROJECT_DIR)/../lib/static-build-i386/include",
+				);
+				INFOPLIST_FILE = "hbcitool/hbcitool-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
+				INFOPLIST_PREFIX_HEADER = svnrevision.h;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../lib/static-build-i386/lib/gwenhywfar/**",
+					"$(PROJECT_DIR)/../lib/static-build-i386/lib/aqbanking/**",
+					"$(PROJECT_DIR)/../lib/static-build-i386/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"hbcitool/hbcitool-Info.plist",
+					"-lz",
+					"-lcharset",
+					"-lintl",
+					"-liconv",
+					"-lgmp",
+					"-lgpg-error",
+					"-lgcrypt",
+					"-lgnutls",
+					"-lgnutls-extra",
+					"-lgnutls-openssl",
+					"-lgwenhywfar",
+					"-laqbanking",
+					"-laqhbci",
+					"-laqb_plugins",
+					"-lgwen_plugins",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = "hbcitool-GPL-source";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "hbcitool-GPL-source" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "hbcitool-GPL-source" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

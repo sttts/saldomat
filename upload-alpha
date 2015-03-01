@@ -1,0 +1,10 @@
+#!/bin/sh
+VERSION=`cat src/version`
+DMG="Saldomat.dmg"
+DMG_ALPHA="Saldomat-alpha.dmg"
+
+ln -sf $DMG $DMG_ALPHA
+
+s3cmd/s3cmd -P -v put $DMG_ALPHA s3://saldomat
+
+ls -l $DMG_ALPHA
