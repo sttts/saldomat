@@ -1996,9 +1996,11 @@ IGvDtm5uZW4uA</bytes>
 							<string key="NSPlaceholderString">Buchungen</string>
 							<reference key="NSControlView" ref="895809615"/>
 							<bool key="NSDrawsBackground">YES</bool>
-							<object class="NSColor" key="NSBackgroundColor">
-								<int key="NSColorSpace">1</int>
-								<bytes key="NSRGB">MSAxIDEAA</bytes>
+							<object class="NSColor" key="NSBackgroundColor" id="967384879">
+								<int key="NSColorSpace">6</int>
+								<string key="NSCatalogName">System</string>
+								<string key="NSColorName">controlBackgroundColor</string>
+								<reference key="NSColor" ref="936209320"/>
 							</object>
 							<reference key="NSTextColor" ref="725647626"/>
 							<object class="NSButtonCell" key="NSSearchButtonCell">
@@ -2438,12 +2440,7 @@ IGvDtm5uZW4uA</bytes>
 															<int key="NSfFlags">1044</int>
 														</object>
 														<reference key="NSControlView" ref="77566090"/>
-														<object class="NSColor" key="NSBackgroundColor">
-															<int key="NSColorSpace">6</int>
-															<string key="NSCatalogName">System</string>
-															<string key="NSColorName">controlBackgroundColor</string>
-															<reference key="NSColor" ref="936209320"/>
-														</object>
+														<reference key="NSBackgroundColor" ref="967384879"/>
 														<object class="NSColor" key="NSTextColor">
 															<int key="NSColorSpace">1</int>
 															<bytes key="NSRGB">MC44MDI0NDE0MiAwLjgwMjQ0MTQyIDAuODAyNDQxNDIAA</bytes>
