@@ -1401,7 +1401,6 @@
 				381FEB140DB1422C00A9BD9E /* Frameworks kopieren */,
 				381FEB380DB148C400A9BD9E /* hbcitool und hbcidock kopieren */,
 				382725420DF9CBCA003D3996 /* English.lproj löschen für Release */,
-				38C1E6C40DC431E300A188E7 /* Signieren */,
 			);
 			buildRules = (
 			);
@@ -1422,7 +1421,6 @@
 				38E44ABA0DB38D520087AB05 /* Resources */,
 				38E44ABB0DB38D520087AB05 /* Sources */,
 				38E44ABC0DB38D520087AB05 /* Frameworks */,
-				38C1E6C60DC431FA00A188E7 /* Signieren */,
 			);
 			buildRules = (
 			);
@@ -1744,36 +1742,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "DESTDIRREL=Frameworks/AqBanking\nDESTDIR=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/$DESTDIRREL\"\n\nif [ $ARCHS == ppc ]; then\n\texport archdir=ppc\nelif [ $CONFIGURATION == Debug ]; then\n\texport archdir=debug\nelse\n\texport archdir=i386\nfi \n\nmkdir -p \"$DESTDIR\"\nrsync -avx --delete --delete-excluded --exclude us --exclude ca --exclude ch --exclude man --exclude info --exclude aclocal ../lib/static-build-$archdir/share \"$DESTDIR\"\n\n# Plugins rueberkopieen\nmkdir -p \"$DESTDIR/lib\"\nrsync -auvx --delete --delete-excluded --exclude '*.a' --exclude '*.la' ../lib/static-build-$archdir/lib/aqbanking \"$DESTDIR/lib\"\nrsync -auvx --delete --delete-excluded --exclude '*.a' --exclude '*.la' ../lib/static-build-$archdir/lib/gwenhywfar \"$DESTDIR/lib\"\n\n# Links erstellen, damit dlopen die Libs finden ohne Endung\nfind \"$DESTDIR/lib\" -name \"*.so\" | \\\nwhile read l; do \\\n\tdir=`dirname \"$l\"`\n\tbase=`basename \"$l\" .so`\n\tln -s \"$base.so\" \"$dir/$base\"\ndone\n\n#set -x\n\n# Dynamische Bibliotheken kopieren\nsdir=\"../lib/static-build-$archdir/lib\"\nsdir=`cd \"$sdir\"; pwd -P`\nsdir=`echo \"$sdir\" | sed 's#^.*/\\([^/]*/[^/]*/[^/]*\\)$#\\1#'` # letzten 3 Pfadteile vom ldir ausschneiden\n\nfunction makeRelocatable {\n\tprefix=$3\n\techo \"$prefix Checking referenced dylibs of $1\"\n\t/usr/bin/otool -L \"$1\" | tail -n +2 | awk '{ print $1; }' | \\\n\twhile read l; do \\\n\t\tldir=`dirname \"$l\"`\n\t\tlname=`basename \"$l\"`\n\n\t\t# letzten 3 Pfadteile vom ldir ausschneiden\n\t\tldir=`echo \"$ldir\" | sed 's#^.*/\\([^/]*/[^/]*/[^/]*\\)$#\\1#'`\n\n\t\t# letzten 3 Pfadteile vergleichen\n\t\tif [ \"$ldir\" == \"$sdir\" ]; then\n\t\t\techo \"$prefix Updating reference $l\"\n\n\t\t\t# Verweise im Executable auf dylib anpassen\n\t\t\t/usr/bin/install_name_tool -change \"$l\" \"@executable_path/../Resources/$DESTDIRREL/lib/$lname\" \"$1\"\n\n\t\t\t# $2/$lname existiert und ist neuer als das Original?\n\t\t\tif [ \"$2/$lname\" -nt \"../$sdir/$lname\" ]; then\n\t\t\t\techo \"$prefix $2/$lname already uptodate\"\n\t\t\telse\n\t\t\t\techo \"$prefix Copying ../$sdir/$lname to $2\"\n\n\t\t\t\t# Dylib kopieren\n\t\t\t\tcp -a \"../$sdir/$lname\" \"$2\"\n\t\t\t\tif [ -d \"../$sdir/$lname.dSYM\" ]; then \n\t\t\t\t\tcp -a \"../$sdir/$lname.dSYM\" \"$2\"\n\t\t\t\tfi\t\n\t\t\t\tmakeRelocatable \"$2/$lname\" \"$2\" \"$prefix*\"\n\t\t\tfi\n\t\tfi\n\tdone\n\n\techo \"$prefix Finished $1\"\n}\n\nmakeRelocatable \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\" \"$DESTDIR/lib\" \"*\"\n\n# Plugins relokierbar machen\nfind \"$DESTDIR/lib\" -name \"*.so\" | \\\nwhile read l; do\n\tmakeRelocatable \"$l\" \"$DESTDIR/lib\" \"*\"\ndone";
-		};
-		38C1E6C40DC431E300A188E7 /* Signieren */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Signieren;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "codesign --deep --force -s 'Michael & Stefan Schimanski' \"$TARGET_BUILD_DIR/$WRAPPER_NAME/Contents/Resources/Saldomat hbcitool.app\"\ncodesign --deep --force -s 'Michael & Stefan Schimanski' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
-			showEnvVarsInLog = 0;
-		};
-		38C1E6C60DC431FA00A188E7 /* Signieren */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Signieren;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "codesign --deep --force -s 'Michael & Stefan Schimanski' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
-			showEnvVarsInLog = 0;
 		};
 		38E191490DDD00150049DFC2 /* SHA1 von Saldomat.keychain */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2137,7 +2105,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2200,7 +2167,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2318,7 +2284,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2364,7 +2329,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2436,7 +2400,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2533,7 +2496,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2568,7 +2530,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2606,7 +2567,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2644,7 +2604,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
