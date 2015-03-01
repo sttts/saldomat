@@ -1,8 +1,7 @@
 #!/bin/sh
 
-# Aktuelle hbci-version
-ssh limoia.com 'cd /home/git; echo $[`cat hbci-version` + 1] > hbci-version.neu; mv hbci-version.neu hbci-version; cat hbci-version' \
-    > hbci-version
+OLD_VERSION=$(cat hbci-version)
+echo $[$OLD_VERISON + 1] > hbci-version
 
 # Bauen
 cd src
