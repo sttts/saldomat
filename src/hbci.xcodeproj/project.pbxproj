@@ -56,7 +56,6 @@
 		38284ED00F06C0B80090F730 /* AuthorizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38284ECF0F06C0B80090F730 /* AuthorizationController.m */; };
 		3828F8030DE48F2700C5B9B3 /* 853_889.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3828F8020DE48F2700C5B9B3 /* 853_889.xcmappingmodel */; };
 		382B10740DB7E328006DC447 /* MessageBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382B10730DB7E328006DC447 /* MessageBoxController.m */; };
-		382B12190DB8190C006DC447 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 382B12180DB8190C006DC447 /* COPYING */; };
 		382B12470DB81D79006DC447 /* UKCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 382B12400DB81D79006DC447 /* UKCrashReporter.m */; };
 		382B124A0DB81D79006DC447 /* UKNibOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 382B12440DB81D79006DC447 /* UKNibOwner.m */; };
 		382B124B0DB81D79006DC447 /* UKSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 382B12460DB81D79006DC447 /* UKSystemInfo.m */; };
@@ -1374,7 +1373,6 @@
 				381D25080D983E750098A1E9 /* Resources */,
 				381D25090D983E750098A1E9 /* Sources */,
 				381D250A0D983E750098A1E9 /* Frameworks */,
-				382B12080DB81760006DC447 /* Quellcode nach GPL mitreinkopieren */,
 				38C1DF390DC2591300A188E7 /* AqBanking-Dateien kopieren */,
 				382725500DF9CC72003D3996 /* English.lproj löschen für Release */,
 			);
@@ -1484,7 +1482,6 @@
 				38BAEB8F0DAFDB240064633B /* hbcitool.xib in Resources */,
 				38BAEB930DAFDB480064633B /* InputWindow.xib in Resources */,
 				38B72A660DB4F3ED006D882E /* APPL.icns in Resources */,
-				382B12190DB8190C006DC447 /* COPYING in Resources */,
 				386CE46A0DB97D3B0014C9C2 /* Localizable.strings in Resources */,
 				38C1E85D0DC4B3BE00A188E7 /* Zertifikat120.png in Resources */,
 			);
@@ -1664,21 +1661,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ ! \"$BUILD_STYLE\" = \"Debug\" ]; then\n\trm -rf \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources/English.lproj\"\nfi";
-			showEnvVarsInLog = 0;
-		};
-		382B12080DB81760006DC447 /* Quellcode nach GPL mitreinkopieren */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Quellcode nach GPL mitreinkopieren";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\ntar --exclude .svn -czf hbcitool-GPL-source.tar.gz CocoaBankingProtocol.h German.lproj/hbcitool.xib German.lproj/InputWindow.xib German.lproj/PinWindow.xib Konto.h Version.* debug.h svnrevision.h hbcitool/* hbcimenu/Symbole/Schloss.icns hbcimenu/Symbole/Zertifikat120.png hbcitool-GPL-source.xcodeproj hbcitool-GPL-source_Prefix.pch\ncp -f hbcitool-GPL-source.tar.gz \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Resources\"\n";
 			showEnvVarsInLog = 0;
 		};
 		386CE1710DB8F2A30014C9C2 /* ShellScript */ = {
