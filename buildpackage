@@ -10,8 +10,8 @@ APP_LINK_IN_DMG=1
 
 . ./config
 
-UDMG="uncompressed_$DMG"                                                                                                                         
-TAR=`pwd`/${APP}_$VERSION.tar                                                                                                                    
+UDMG="uncompressed_$DMG"
+TAR=`pwd`/${APP}_$VERSION.tar
 ZIP=`pwd`/${APP}_$VERSION.zip
 
 rm -f $DMG $DMG.bz2 $UDMG $TAR $TAR.bz2 $ZIP
@@ -37,7 +37,7 @@ fi
 
 ditto ${SRC}build/$DMG_TARGET/$APP.$EXT /Volumes/$APP/$APP.$EXT
 cp -f dmg/dmgbg.png /Volumes/$APP/dmgbg.png
-/Developer/Tools/SetFile -a V /Volumes/$APP/dmgbg.png
+SetFile -a V /Volumes/$APP/dmgbg.png
 cp -f dmg/DS_Store /Volumes/$APP/.DS_Store
 if [ $APP_LINK_IN_DMG = 1 ]; then
     ln -s /Applications /Volumes/$APP/Applications

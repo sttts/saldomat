@@ -5,5 +5,5 @@ EXT=app
 DMG="$APP.dmg"
 UPDATE_FORMAT=tbz
 SRC=src/
-DMG_TARGET=Release-growl-installer
+DMG_TARGET=Release
 UPDATE_TARGET=Release
