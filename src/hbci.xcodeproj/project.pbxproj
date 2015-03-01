@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -23,7 +23,7 @@
 /* Begin PBXBuildFile section */
 		38005EA119F702C100FB6E2E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 38005EA019F702C100FB6E2E /* RegexKitLite.m */; };
 		380183A20DFF3B7000B0E73A /* 928_967.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 380183A10DFF3B7000B0E73A /* 928_967.xcmappingmodel */; };
-		380185300E0184A000B0E73A /* Sparkle.framework in Frameworks kopieren */ = {isa = PBXBuildFile; fileRef = 381FEAD90DB141CC00A9BD9E /* Sparkle.framework */; };
+		38058A001AA35E0C00D5D371 /* Sparkle.framework in Frameworks kopieren */ = {isa = PBXBuildFile; fileRef = 381FEAD90DB141CC00A9BD9E /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3808EA9C0E150E540066A855 /* beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 3808EA9B0E150E540066A855 /* beta.png */; };
 		3808EB2C0E1526370066A855 /* beta-gerade.png in Resources */ = {isa = PBXBuildFile; fileRef = 3808EB2B0E1526370066A855 /* beta-gerade.png */; };
 		3808ED6F0E16FA260066A855 /* NSFileManager+AuthorizedMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 3808ED6E0E16FA260066A855 /* NSFileManager+AuthorizedMove.m */; };
@@ -331,7 +331,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				380185300E0184A000B0E73A /* Sparkle.framework in Frameworks kopieren */,
+				38058A001AA35E0C00D5D371 /* Sparkle.framework in Frameworks kopieren */,
 			);
 			name = "Frameworks kopieren";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1400,8 +1400,8 @@
 				389ECE250DA8C964000791E1 /* Frameworks */,
 				381FEB140DB1422C00A9BD9E /* Frameworks kopieren */,
 				381FEB380DB148C400A9BD9E /* hbcitool und hbcidock kopieren */,
-				38C1E6C40DC431E300A188E7 /* Signieren */,
 				382725420DF9CBCA003D3996 /* English.lproj löschen für Release */,
+				38C1E6C40DC431E300A188E7 /* Signieren */,
 			);
 			buildRules = (
 			);
@@ -1440,6 +1440,17 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					381D250B0D983E750098A1E9 = {
+						DevelopmentTeam = QUY34Y5C3U;
+					};
+					389ECE260DA8C964000791E1 = {
+						DevelopmentTeam = QUY34Y5C3U;
+					};
+					38E44ABD0DB38D520087AB05 = {
+						DevelopmentTeam = QUY34Y5C3U;
+					};
+				};
 			};
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "hbci" */;
 			compatibilityVersion = "Xcode 3.0";
@@ -1761,7 +1772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "codesign --force -s 'Michael & Stefan Schimanski' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
+			shellScript = "codesign --deep --force -s 'Michael & Stefan Schimanski' \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"";
 			showEnvVarsInLog = 0;
 		};
 		38E191490DDD00150049DFC2 /* SHA1 von Saldomat.keychain */ = {
@@ -2125,6 +2136,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2148,7 +2161,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-debug/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-debug/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -2176,6 +2189,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.9;
 			};
 			name = Debug;
@@ -2185,6 +2199,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2217,7 +2233,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2268,6 +2284,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
@@ -2299,7 +2316,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2318,10 +2337,10 @@
 				INFOPLIST_PREPROCESS = YES;
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0x10000000,
 					"-lcrypto",
 					"-sectcreate",
 					__TEXT,
@@ -2335,6 +2354,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat-debug";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2342,7 +2362,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2359,10 +2381,10 @@
 				INFOPLIST_PREFIX_HEADER = svnrevision.h;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0x10000000,
 					"-lcrypto",
 					"-sectcreate",
 					__TEXT,
@@ -2376,6 +2398,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Saldomat;
+				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				VALID_ARCHS = "i386 x86_64";
 				ZERO_LINK = NO;
@@ -2412,6 +2435,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2444,7 +2469,7 @@
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib/aqbanking/**",
 					"$(PROJECT_DIR)/../lib/static-build-ppc/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2495,6 +2520,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat hbcitool";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
@@ -2505,7 +2531,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2522,35 +2550,12 @@
 				INFOPLIST_PREFIX_HEADER = svnrevision.h;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0x10000000,
-					"-lcrypto",
-					"-sectcreate",
-					__TEXT,
-					__info_plist,
-					"hbcimenu/hbcimenu-Info.plist",
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"-seg1addr",
-					0x10000000,
-					"-lcrypto",
-					"-sectcreate",
-					__TEXT,
-					__info_plist,
-					"hbcimenu/hbcimenu-Info.plist",
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Saldomat;
+				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				VALID_ARCHS = "i386 x86_64";
 				ZERO_LINK = NO;
@@ -2561,7 +2566,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2574,6 +2581,7 @@
 				INFOPLIST_PREFIX_HEADER = svnrevision.h;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2586,6 +2594,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat Dock";
+				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
 			};
@@ -2595,7 +2604,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2609,6 +2620,7 @@
 				INFOPLIST_PREFIX_HEADER = svnrevision.h;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
@@ -2622,6 +2634,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat Dock";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2629,7 +2642,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
@@ -2642,6 +2657,7 @@
 				INFOPLIST_PREFIX_HEADER = svnrevision.h;
 				INFOPLIST_PREPROCESS = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -2654,6 +2670,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Saldomat Dock";
+				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				ZERO_LINK = NO;
 			};

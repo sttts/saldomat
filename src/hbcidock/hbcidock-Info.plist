@@ -22,6 +22,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>RAWVERSION</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.finance</string>
 	<key>NSMainNibFile</key>
 	<string>hbcidock</string>
 	<key>NSPrincipalClass</key>

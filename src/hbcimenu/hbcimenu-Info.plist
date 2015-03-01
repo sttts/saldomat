@@ -19,12 +19,12 @@
 			</array>
 			<key>CFBundleTypeName</key>
 			<string>SaldomatLicense</string>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>
 			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>NSPersistentStoreTypeKey</key>
 			<string>Binary</string>
 		</dict>
@@ -49,8 +49,12 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>RAWVERSION</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.finance</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.5</string>
+	<key>LSUIElement</key>
+	<string>1</string>
 	<key>NSAppleScriptEnabled</key>
 	<true/>
 	<key>NSMainNibFile</key>
@@ -61,8 +65,6 @@
 	<string>suite.sdef</string>
 	<key>SUExpectsDSASignature</key>
 	<true/>
-	<key>LSUIElement</key>
-	<string>1</string>
 	<key>SUFeedURL</key>
 	<string>http://appcasts.limoia.com/saldomat.xml</string>
 	<key>SUPublicDSAKey</key>

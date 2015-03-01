@@ -6,6 +6,8 @@
 //  Copyright 2008 1stein.org. All rights reserved.
 //
 
+#import "objc/runtime.h"
+
 #import "IconController.h"
 
 #import "AppController.h"
@@ -22,13 +24,14 @@
 #import "urls.h"
 #import "ZaehlerImage.h"
 
-
 @interface NSSearchFieldCell(SearchTimer)
 @property (readonly) NSTimer * searchTimer;
 @end
+
 @implementation NSSearchFieldCell(SearchTimer)
 - (NSTimer *)searchTimer {
-	return _partialStringTimer;
+	Ivar nameIVar = class_getInstanceVariable([NSSearchFieldCell class], "_partialStringTimer");
+	return object_getIvar(self, nameIVar);
 }
 @end
 

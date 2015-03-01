@@ -9,7 +9,6 @@
 #import "UpdateController.h"
 
 #import "../Sparkle.framework/Headers/Sparkle.h"
-#import "../Sparkle.framework/Headers/SUConstants.h"
 #import "../Sparkle.framework/Headers/SUStandardVersionComparator.h"
 
 #import "AppController.h"
@@ -30,9 +29,9 @@
 	wartendesUpdate_ = nil;
 	
 	// Update-Parameter
-	[defaults addObserver:self forKeyPath:SUEnableAutomaticChecksKey
+	[defaults addObserver:self forKeyPath:@"SUEnableAutomaticChecksKey"
 		      options:NSKeyValueObservingOptionNew context:@"SUEnableAutomaticChecksKey"];
-	[defaults addObserver:self forKeyPath:SUScheduledCheckIntervalKey
+	[defaults addObserver:self forKeyPath:@"SUScheduledCheckIntervalKey"
 		      options:NSKeyValueObservingOptionNew context:@"SUScheduledCheckInterval"];
 	
 	// Kontoauszugswechsel mitbekommen wegen verzoegertem Update

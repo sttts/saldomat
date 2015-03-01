@@ -30,10 +30,10 @@
 
 - (void)selektionMitArraySync
 {
-	int sel = NSNotFound;
+	long sel = NSNotFound;
 	if ([kontoWindowCtrl_ kontoViewIsSichtbar]) {
 		// Kontoansicht => Selektiertes Konto suchen
-		int ki = [kontenCtrl_ selectionIndex];
+		long ki = [kontenCtrl_ selectionIndex];
 		if (ki != NSNotFound) {
 			Konto * konto = [[kontenCtrl_ arrangedObjects] objectAtIndex:ki];
 			sel = [outlineView_ rowForItem:konto];

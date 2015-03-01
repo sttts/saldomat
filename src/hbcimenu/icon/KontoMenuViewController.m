@@ -301,7 +301,7 @@
 	// naechste neue Buchung suchen
 	int i = [buchungen_ selectionIndex];
 	if (i == NSNotFound)
-		i == 0;
+		i = 0;
 	NSArray * buchungen = [buchungen_ arrangedObjects];
 	while (i < [buchungen count] && ![[buchungen objectAtIndex:i] neu])
 		++i;

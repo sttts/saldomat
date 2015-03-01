@@ -9,7 +9,7 @@
 #import "HbciToolLoader.h"
 
 #import "../Sparkle.framework/Headers/Sparkle.h"
-#import "../Sparkle.framework/Headers/SUConstants.h"
+
 #import "RegexKitLite.h"
 
 #import "UKCrashReporter.h"

@@ -94,7 +94,7 @@ static OSStatus LaunchSystemEvents(ProcessSerialNumber *psnPtr)
     // Launch it!
     
     if (err == noErr) {
-        if ( LSOpenApplication != NULL ) {
+        /*if ( LSOpenApplication != NULL ) {*/
             LSApplicationParameters     appParams;
             
             // Do it the easy way on 10.4 and later.
@@ -105,7 +105,7 @@ static OSStatus LaunchSystemEvents(ProcessSerialNumber *psnPtr)
             appParams.application = &appRef;
             
             err = LSOpenApplication(&appParams, psnPtr);
-        } else {
+        /*} else {
             FSSpec				appSpec;
             LaunchParamBlockRec lpb;
             
@@ -132,7 +132,7 @@ static OSStatus LaunchSystemEvents(ProcessSerialNumber *psnPtr)
             if (err == noErr) {
                 *psnPtr = lpb.launchProcessSN;
             }
-        }
+        }*/
     }
 
 	return err;

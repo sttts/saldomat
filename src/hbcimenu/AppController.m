@@ -9,7 +9,6 @@
 #import "AppController.h"
 
 #import "../Sparkle.framework/Headers/Sparkle.h"
-#import "../Sparkle.framework/Headers/SUConstants.h"
 
 #import "AktionenController.h"
 #import "AppDelegate.h"
@@ -44,7 +43,7 @@ AppController * theAppCtrl = nil;
 @implementation Konto (AddrIdent)
 - (NSString *)addrIdent
 {
-	return [NSString stringWithFormat:@"%d", self]; 
+	return [NSString stringWithFormat:@"%d", self];
 }
 @end
 
@@ -68,8 +67,8 @@ AppController * theAppCtrl = nil;
 				      [NSNumber numberWithInt:YES], @"autoload",
 				      [NSNumber numberWithInt:2], @"interval",
 				      [NSNumber numberWithInt:12], @"deleteAfterMonth",
-				      [NSNumber numberWithInt:86400], SUScheduledCheckIntervalKey,
-				      [NSNumber numberWithBool:YES], SUEnableAutomaticChecksKey,
+				      [NSNumber numberWithInt:86400], @"SUScheduledCheckInterval",
+				      [NSNumber numberWithBool:YES], @"SUEnableAutomaticChecks",
 				      [NSNumber numberWithBool:YES], @"alwaysShowSubmenuForAccounts",
 				      [NSNumber numberWithDouble:3.0], @"gelesenMarkierenNach",
 				      [NSNumber numberWithBool:NO], @"gelesenMarkieren",

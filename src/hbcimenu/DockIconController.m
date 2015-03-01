@@ -10,7 +10,7 @@
 
 #import "Carbon/Carbon.h"
 #import "../Sparkle.framework/Headers/Sparkle.h"
-#import "../Sparkle.framework/Headers/SUConstants.h"
+#import "../Sparkle.framework/Headers/SUUpdater.h"
 
 #import "AppController.h"
 #import "debug.h"
