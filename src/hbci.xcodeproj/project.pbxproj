@@ -2372,6 +2372,7 @@
 					Foundation,
 					"-framework",
 					AppKit,
+					"-licucore",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Saldomat;

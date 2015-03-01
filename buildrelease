@@ -6,8 +6,6 @@ ssh limoia.com 'cd /home/git; echo $[`cat hbci-version` + 1] > hbci-version.neu;
 
 # Bauen
 cd src
-/Developer_3/usr/bin/xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release clean
-/Developer_3/usr/bin/xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release
-/Developer_3/usr/bin/xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release-growl-installer clean
-/Developer_3/usr/bin/xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release-growl-installer
+xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release clean
+xcodebuild -project hbci.xcodeproj -target hbcimenu -configuration Release
 cd ..
